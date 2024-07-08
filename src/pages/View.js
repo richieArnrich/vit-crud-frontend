@@ -7,7 +7,7 @@ function View() {
   const [users, setUsers] = React.useState([]);
   useEffect(() => {
     axios
-      .get("https://vit-crud-backend.onrender.com:4000/users/getusers")
+      .get("https://vit-crud-backend.onrender.com/users/getusers")
       .then((res) => {
         console.log(res.data);
         setUsers(res.data);
@@ -18,9 +18,7 @@ function View() {
   }, []);
   const deleteData = (id) => {
     axios
-      .delete(
-        "https://vit-crud-backend.onrender.com:4000/users/deleteuser/" + id
-      )
+      .delete("https://vit-crud-backend.onrender.com/users/deleteuser/" + id)
       .then((res) => {
         console.log(res.data);
         if (res.status === 200) {
