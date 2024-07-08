@@ -9,7 +9,10 @@ function ViewSingleUser() {
   const [user, setUser] = useState({});
   useEffect(() => {
     axios
-      .get("http://localhost:4000/users/getsingleuser/" + obj1.id)
+      .get(
+        "https://vit-crud-backend.onrender.com:4000/users/getsingleuser/" +
+          obj1.id
+      )
       .then((res) => {
         setUser(res.data);
         console.log(res.data);

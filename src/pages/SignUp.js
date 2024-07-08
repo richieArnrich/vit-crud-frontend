@@ -8,7 +8,7 @@ function SignUp() {
   const [password, setPassword] = useState();
   const handleSubmit = (event) => {
     let inputObj = { username, email, password };
-    let url = "http://localhost:4000/users/createuser";
+    let url = "https://vit-crud-backend.onrender.com:4000/users/createuser";
     axios
       .post(url, inputObj)
       .then((res) => {
